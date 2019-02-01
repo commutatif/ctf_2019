@@ -1,0 +1,5 @@
+Utiliser john:
+- unshadow des fichiers shadow et passwd
+- lancer john
+
+voir pwd.CRACKED pour le mot de passe
