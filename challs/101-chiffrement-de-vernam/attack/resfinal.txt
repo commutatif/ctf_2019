@@ -1,0 +1,190 @@
+key: 187; 176; 204; 60; 6; 103; 83; 34; 209; 30; 76; 118; 195; 206; 222; 236; 18; 58; 242; 35; 117; 109; 24; 168; 236; 19; 249; 235; 24; 196; 34; 211; 116; 238; 16; 123; 85; 99; 157; 38; 129; 233; 156; 68; 183; 123; 48; 201; 181; 35; 236; 42; 144; 5; 210; 124; 24; 204; 103; 48; 144; 137; 4; 4; 120; 20; 127; 205; 119; 28; 244; 249; 6; 144; 61; 189; 11; 110; 135; 192; 145; 115; 235; 33; 120; 189; 158; 145; 137; 5; 193; 25; 143; 197; 30; 7; 217; 157; 212; 81; 186; 200; 74; 192; 89; 135; 125; 100; 245; 4; 37; 134; 120; 16; 168; 240; 205; 70; 129; 87; 75; 67; 112; 218; 8; 142; 225; 226; 44; 182; 51; 230; 126; 125; 166; 215; 4; 35; 60; 250; 40; 97; 128; 160; 113; 40; 144; 62; 110; 18; 149; 186; 85; 6; 148; 93; 148; 118; 63; 192; 44; 114; 166; 170; 239; 76; 130; 244; 112; 190; 238; 152; 31; 110; 56; 144; 151; 200; 206; 5; 218; 100; 191; 47; 106; 84; 141; 254; 202; 204; 191; 246; 63; 101; 160; 46; 178; 34; 34; 34; 224; 16; 186; 255; 127; 242; 143; 22; 186; 94; 27; 149; 194; 219; 196; 44; 47; 81; 42; 249; 30; 233; 239; 93; 79; 143; 139; 1; 178; 174; 35; 146; 190; 221; 146; 61; 207; 33; 83; 137; 127; 111; 30; 65; 74; 227; 109; 121; 52; 152; 114; 82; 129; 97; 175; 208; 240; 59; 209; 162; 233; 244; 53; 167; 209; 199; 229; 160; 232; 56; 42; 104; 167; 72; 169; 241; 43; 23; 106; 96; 175; 220; 178; 48; 61; 98; 1; 46; 157; 210; 208; 134; 199; 5; 45; 152; 204; 18; 57; 181; 75; 99; 29; 242; 171; 198; 228; 215; 221; 78; 55; 140; 43; 233; 189; 104; 75; 190; 150; 232; 144; 103; 110; 87; 108; 156; 240; 57; 174; 41; 238; 249; 140; 11; 236; 55; 209; 208; 14; 175; 30; 69; 59; 73; 47; 248; 178; 122; 182; 72; 99; 71; 175; 209; 158; 28; 109; 142; 85; 28; 183; 67; 21; 67; 78; 1; 123; 31; 209; 137; 206; 240; 207; 10; 57; 254; 2; 235; 120; 185; 52; 219; 0; 227; 173; 158; 255; 26; 45; 84; 54; 228; 151; 76; 40; 229; 77; 163; 5; 31; 44; 211; 15; 251; 221; 72; 249; 224; 52; 114; 153; 104; 77; 153; 75; 250; 55; 75; 21; 100; 159; 75; 73; 55; 151; 113; 28; 229; 20; 33; 4; 64; 245; 19; 60; 210; 91; 53; 178; 143; 167; 75; 247; 245; 228; 67; 239; 28; 142; 4; 128; 45; 80; 201; 100; 231; 58; 129; 204; 78; 162; 208; 143; 151; 227; 203; 106; 63; 0; 28; 206; 168; 104; 198; 157; 76; 9; 140; 104; 151; 145; 233; 196; 225; 178; 41; 200; 237; 170; 149; 59; 76; 101; 202; 228; 73; 149; 78; 136; 150; 106; 86; 62; 210; 28; 219; 31; 37; 103; 135; 188; 248; 112; 129; 217; 35; 170; 162; 16; 84; 55; 75; 160; 156; 22; 132; 229; 171; 210; 109; 65; 61; 196; 127; 15; 224; 90; 46; 6; 194; 182; 194; 186; 38; 67; 148; 73; 237; 54; 89; 65; 109; 165; 226; 9; 187; 102; 239; 102; 57; 92; 168; 118; 32; 39; 133; 1; 130; 180; 7; 68; 106; 201; 254; 144; 13; 146; 218; 250; 200; 51; 60; 53; 216; 30; 63; 147; 132; 46; 250; 189; 138; 162; 51; 171; 201; 185; 172; 75; 109; 179; 143; 215; 124; 142; 103; 137; 32; 65; 132; 233; 117; 192; 30; 77; 222; 93; 225; 98; 139; 219; 32; 22; 125; 83; 193; 70; 12; 109; 146; 121; 32; 33; 80; 156; 175; 184; 38; 208; 249; 170; 185; 110; 106; 215; 188; 72; 53; 157; 170; 192; 120; 202; 214; 245; 30; 151; 59; 42; 4; 205; 164; 36; 239; 244; 193; 158; 172; 231; 110; 166; 145; 39; 20; 251; 255; 208; 67; 52; 109; 237; 244; 229; 184; 203; 218; 214; 98; 22; 0; 103; 227; 164; 139; 210; 153; 76; 113; 69; 51; 223; 235; 196; 7; 0; 191; 6; 208; 2; 58; 62; 240; 46; 35; 168; 249; 254; 126; 92; 20; 126; 195; 247; 35; 78; 202; 188; 155; 59; 1; 206; 26; 237; 147; 33; 237; 82; 39; 189; 85; 97; 251; 69; 144; 31; 237; 137; 29; 107; 229; 49; 233; 168; 40; 12; 247; 242; 200; 146; 45; 202; 96; 72; 183; 243; 105; 164; 70; 145; 97; 155; 242; 93; 224; 130; 124; 205; 12; 153; 56; 241; 202; 33; 154; 242; 46; 145; 229; 246; 35; 18; 192; 131; 90; 119; 119; 196; 27; 189; 85; 125; 88; 71; 218; 56; 202; 86; 5; 214; 239; 61; 199; 185; 94; 97; 171; 140; 242; 144; 131; 21; 163; 67; 153; 253; 187; 16; 193; 214; 205; 22; 83; 37; 94; 45; 93; 40; 131; 98; 254; 114; 159; 197; 43; 253; 39; 215; 138; 25; 103; 13; 47; 10; 80; 200; 8; 11; 216; 201; 226; 165; 224; 53; 202; 62; 99; 39; 102; 230; 137; 100; 89; 40; 41; 132; 37; 80; 91; 175; 106; 195; 188; 153; 205; 13; 97; 213; 24; 57; 159; 250; 222; 127; 48; 168; 189; 147; 207; 35; 121; 88; 135; 210; 128; 176; 87; 165; 1; 178; 85; 107; 117; 17; 4; 67; 30; 101; 24; 55; 158; 183; 49; 124; 54; 97; 36; 243; 244; 243; 22; 110; 75; 157; 64; 203; 78; 151; 112; 79; 74; 197; 186; 191; 215; 190; 2; 245; 35; 27; 44; 193; 210; 94; 61; 9; 191; 97; 252; 180; 84; 19; 34; 159; 176; 98; 106; 254; 250; 218; 77; 68; 160; 7; 3; 119; 197; 6; 108; 232; 33; 153; 169; 243; 247; 230; 252; 182; 71; 249; 106; 155; 12; 140; 58; 188; 239; 164; 187; 233; 127; 8; 45; 31; 16; 48; 150; 213; 54; 2; 190; 87; 155; 103; 75; 146; 78; 71; 73; 149; 64; 179; 49; 76; 64; 107; 9; 47; 16; 196; 24; 143; 204; 69; 174; 220; 117; 68; 178; 172; 70; 112; 3; 226; 215; 78; 116; 37; 150; 189; 187; 214; 113; 236; 35; 177; 87; 44; 224; 103; 240; 248; 246; 188; 61; 164; 153; 178; 232; 75; 94; 47; 187; 98; 17; 146; 176; 133; 184; 70; 67; 115; 29; 180; 95; 64; 101; 182; 108; 69; 30; 92; 61; 20; 24; 122; 185; 177; 44; 161; 252; 139; 208; 183; 237; 225; 74; 157; 103; 2; 228; 170; 117; 1; 94; 212; 65; 195; 138; 173; 8; 168; 9; 69; 189; 33; 191; 118; 211; 235; 23; 207; 118; 232; 135; 99; 201; 209; 1; 48; 211; 229; 218; 72; 230; 56; 28; 39; 251; 166; 212; 3; 79; 221; 72; 12; 254; 7; 130; 209; 243; 153; 161; 105; 129; 40; 205; 75; 249; 206; 123; 204; 179; 86; 20; 153; 142; 48; 192; 138; 214; 148; 141; 37; 113; 214; 49; 111; 221; 179; 65; 208; 77; 226; 58; 206; 10; 7; 25; 3; 213; 149; 207; 136; 235; 227; 33; 121; 19; 225; 3; 233; 117; 145; 15; 230; 103; 64; 85; 68; 244; 150; 21; 65; 120; 79; 15; 130; 86; 41; 133; 43; 190; 84; 179; 169; 55; 212; 34; 74; 181; 38; 52; 42; 183; 67; 16; 30; 131; 101; 98; 119; 252; 119; 184; 116; 198; 200; 247; 28; 241; 124; 71; 175; 209; 250; 88; 8; 206; 122; 83; 131; 160; 135; 173; 87; 202; 189; 117; 77; 35; 216; 197; 31; 79; 125; 147; 22; 69; 138; 50; 54; 7; 122; 229; 216; 116; 61; 224; 67; 184; 51; 198; 88; 186; 116; 176; 132; 49; 37; 210; 84; 253; 151; 115; 77; 20; 7; 99; 90; 145; 149; 144; 152; 15; 118; 112; 132; 179; 81; 199; 107; 132; 141; 196; 63; 1; 116; 195; 51; 153; 149; 135; 151; 44; 251; 228; 65; 2; 71; 155; 147; 220; 43; 44; 236; 161; 156; 112; 85; 237; 55; 192; 114; 196; 132; 177; 198; 248; 116; 249; 146; 10; 128; 41; 54; 123; 13; 119; 125; 84; 18; 17; 48; 62; 61; 28; 223; 217; 140; 52; 199; 195; 245; 57; 136; 121; 234; 78; 114; 94; 71; 4; 104; 199; 45; 159; 67; 58; 22; 192; 142; 41; 209; 190; 103; 14; 219; 70; 232; 103; 123; 175; 43; 112; 232; 179; 233; 210; 1; 91; 48; 72; 95; 153; 15; 140; 56; 82; 198; 78; 19; 84; 119; 228; 19; 222; 243; 238; 37; 219; 85; 160; 138; 128; 16; 114; 51; 249; 68; 52; 85; 116; 124; 180; 13; 130; 65; 69; 222; 7; 148; 241; 92; 11; 214; 111; 234; 201; 93; 15; 164; 178; 175; 46; 51; 191; 160; 102; 184; 228; 171; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °; °
+
+clear0:
+Shakira Isabel Mebarak Ripoll
+
+is a Colombian singer-songwriter, dancer, record producer, choreographer,
+and model. Born and raised in Barranquilla, she began performing in
+school, demonstrating Latin, Arabic, and rock and roll influences and
+belly dancing abilities. Shakira released her first studio albums, Magia
+and Peligro, in the early 1990s, failing to attain commercial success;
+however, she rose to prominence in Latin America with her major-label
+debut, Pies Descalzos (1996), and her fourth album, Donde Estan los
+Ladrones (1998).
+
+Shakira entered the English-language market with her fifth album, Laundry
+Service (2001). Its lead single, "Whenever, Wherever", became the
+best-selling single of 2002. Her success was solidified with her sixth
+and seventh albums Fijacion Oral, Vol. 1 and Oral Fixation, Vol. 2
+(2005), the latter of which spawned the best-selling song of the 21st
+century, "Hips Don't Lie". Shakira's eighth and ninth albums, She Wolf
+(2009) and Sale el Sol (2010), received critical praise but suffered from
+limited promotion due to her strained relationship with label Epic
+Records. Her official song for the 2010 FIFA World Cup, "Waka Waka (This
+Time for Africa)", became the biggest-selling World Cup song of all time.
+With over 720 million views, its music video is the seventh most-watched
+video on YouTube. Since 2013, Shakira has served as a coach on the
+American version of The Voice, having appeared in two of its six seasons
+(4.and 6). Her tenth album c°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+clear1:
+A university (Latin: "universitas", "a whole") is an institution of
+higher education and research which grants academic degrees in a variety
+of subjects and provides both undergraduate education and postgraduate
+education. The word "university" is derived from the Latin universitas
+magistrorum et scholarium, which roughly means "community of teachers and
+scholars."
+
+The original Latin word "universitas" refers in general to "a number of
+persons associated into one body, a society, company, community, guild,
+corporation, etc." At the time of the emergence of urban town life and
+medieval guilds, specialised "associations of students and teachers with
+collective legal rights usually guaranteed by charters issued by princes,
+prelates, or the towns in which they were located" came to be denominated
+by this general term. Like other guilds, they were self-regulating and
+determined the qualifications of their members.
+
+
+clear2:
+The Moon (Latin: Luna) is the Earth's only natural satellite.
+Although not the largest natural satellite in the Solar System, it is,
+among the satellites of major planets, the largest relative to the size
+of the object it orbits (its primary) and, after Jupiter's
+satellite Io, it is the second most dense satellite among those whose
+densities are known.
+
+The Moon is in synchronous rotation with Earth, always showing the same
+face with its near side marked by dark volcanic maria that fill between
+the bright ancient crustal highlands and the prominent impact craters. It
+is the most luminous object in the sky after the Sun. Although it appears
+a very bright white, its surface is actually dark, with a reflectance
+just slightly higher than that of worn asphalt. Its prominence in the sky
+and its regular cycle of phases have, since ancient times, made the Moon
+an important cultural influence on language, calendars, art, and
+mythology. The Moon's gravitational influence produces the ocean tides
+and the slight lengthening of the day. The Moon's current orbital
+distance is about thirty times the diameter of Earth, causing it to have
+an apparent size in the sky almost the same as that of the Sun. This
+allows the Moon to cover the Sun nearly precisely in total solar eclipse.
+This matching of apparent visual size is a coincidence. The Moon's linear
+distance from Earth is currently increasing at a rate of 3.82 +- 0.07 cm
+per year, but this rate is not constant.
+
+
+clear3:
+The flag is yours.
+
+The code is ghyvcrfgkihjsvcrfvrkuimoj
+
+Congratulations.
+
+Cyclura nubila, also known as the Cuban iguana, is a species of lizard of
+the iguana family. It is the largest of the West Indian rock iguanas, one
+of the most endangered groups of lizards. This herbivorous species with
+red eyes, a thick tail, and spiked jowls is one of the largest lizards in
+the Caribbean. The Cuban iguana is distributed throughout the rocky
+southern coastal areas of mainland Cuba and its surrounding islets with a
+feral population thriving on Isla Magueyes, Puerto Rico. It is also found
+on the Cayman Islands of Little Cayman and Cayman Brac, where a separate
+subspecies occurs. Females guard their nest sites and often nest in sites
+excavated by Cuban crocodiles. As a defense measure, the Cuban iguana
+often makes its home within or near prickly-pear cacti. Although the wild
+population is in decline because of predation by feral animals and
+habitat loss caused by human agricultural development, its numbers have
+been bolstered as a result of captive-breeding and other conservation
+programs. Cyclura nubila has been used to study evolution and animal
+communication, and its captive-breeding program has been a model for
+other endangered lizards in the Caribbean. 
+
+
+clear4:
+Republique francaise
+
+is a sovereign country in Western Europe that includes several overseas
+regions and territories. Metropolitan France extends from the
+Mediterranean Sea to the English Channel and the North Sea, and from the
+Rhine to the Atlantic Ocean. It is one of only three countries (with
+Morocco and Spain) to have both Atlantic and Mediterranean coastlines.
+Due to its shape, it is often referred to in French as l'Hexagone ("The
+Hexagon").
+
+By area, France is the 42nd largest country in the world but the largest
+country in Western Europe and the European Union, and the third-largest
+in Europe as a whole. With a population approaching 67 million, it is the
+20th most populated country and the second-most populated country in the
+EU. France is a unitary semi-presidential republic with its capital in
+Paris, the nation's largest city and the main cultural and commercial
+center. The current Constitution of France, adopted by referendum on 4
+October 1958, establishes the country as secular and democratic, with its
+sovereignty derived from the people. The nation's ideals are expressed in
+the Declaration of the Rights of Man and of the Citizen, one of the
+world's earliest documents on human rights, which was formulated during
+the seminal French Revolution of the late 18th century.
+
+
+clear5:
+Placement new operator:
+
+Line 1 creates an array of sizeof(Fred) bytes of memory, which is big
+enough to hold a Fred object. Line 2 creates a pointer place that points
+to the first byte of this memory (experienced C programmers will note
+that this step was unnecessary, it's there only to make the code more
+obvious). Line 3 essentially just calls the constructor Fred::Fred().
+The this pointer in the Fred constructor will be equal to place. The
+returned pointer f will therefore be equal to place.
+
+ADVICE: Don't use this placement new syntax unless you have to. Use it
+only when you really care that an object is placed at a particular
+location in memory. For example, when your hardware has a memory-mapped
+IO timer device, and you want to place a Clock object at that memory
+location.
+
+DANGER: You are taking sole responsibility that the pointer you pass to
+the placement new operator points to a region of memory that is big
+enough and is properly aligned for the object type that you're creating.
+Neither the compiler nor the run-time system make any attempt to check
+whether you did this right. If your Fred class needs to be aligned on a 4
+byte boundary but you supplied a location that isn't properly aligned,
+you can have a serious disaster on your hands (if you don't know what
+alignment means, please don't use the placement new syntax). You have
+been warned.
+
+You are also solely responsible for destructing the placed object. This
+is done by explicitly calling the destructor:
+
+clear6:
+A computer is a general purpose device that can be programmed to carry
+out a set of arithmetic or logical operations automatically. Since a
+sequence of operations can be readily changed, the computer can solve
+more than one kind of problem.
+
+Conventionally, a computer consists of at least one processing element,
+typically a central processing unit (CPU), and some form of memory. The
+processing element carries out arithmetic and logic operations, and a
+sequencing and control unit can change the order of operations in
+response to stored information. Peripheral devices allow information to
+be retrieved from an external source, and the result of operations saved
+and retrieved.
+
+In World War II, mechanical analog computers were used for specialized
+military applications. During this time the first electronic digital
+computers were developed. Originally they were the size of a large room,
+consuming as much power as several hundred modern personal computers
+(PCs).
+
+
+clear7:
+Courage
+
+Courage is the ability and willingness to confront fear, pain, danger,
+uncertainty, or intimidation. Physical courage is courage in the face of
+physical pain, hardship, death, or threat of death, while moral courage
+is the ability to act rightly in the face of popular opposition, shame,
+scandal, or discouragement.
+
+In some traditions, fortitude holds approximately the same meaning as
+courage. In the Western tradition, notable thoughts on courage have come
+from philosophers such as Aristotle, Aquinas and Kierkegaard; in the
+Eastern tradition, some thoughts on courage were offered by the Tao Te
+Ching. More recently, courage has been explored by the discipline of
+psychology.

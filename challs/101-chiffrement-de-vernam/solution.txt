@@ -1,0 +1,13 @@
+		Commande :
+python attack_mtp.py ciphertexts
+
+Et rentrer un des textes présents dans res
+
+		Result :
+Les textes en clair en cherchant les mots au fur et à mesure
+
+-------------------------------------------------------------------
+
+Flag : ghyvcrfgkihjsvcrfvrkuimoj
+
+
