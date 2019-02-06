@@ -1,0 +1,12 @@
+During the last two rounds, the blue team has reached our base and have
+taken our flag as if our defense vas non-existent. Our shells and bullets
+had absolutely no effect on them.
+
+I suspected they did something fishy, also, I managed to retrieve their
+last communication.
+
+Here it is.
+
+The flag you seek is the sha1sum of the file they exchanged. 
+
+   

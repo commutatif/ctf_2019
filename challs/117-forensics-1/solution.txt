@@ -1,0 +1,16 @@
+Avec wireshark, file -> export objects -> http, il y a qu'un seul ficher qui est triche.docx
+
+-----------------------------------------------------------------------------------------------
+
+		Command :
+sha1sum triche.docx
+
+		Result : 
+2ec6ec15e89026ea39cdc17a702c55c4834fa5b0  triche.docx
+
+------------------------------------------------------------------------------------------------
+
+Flag : 2ec6ec15e89026ea39cdc17a702c55c4834fa5b0 
+
+
+

@@ -1,0 +1,20 @@
+		Command :
+./script.sh | grep OK
+
+		Result :
+./message-777.txt::Verified OK
+
+------------------------------------------------------------------------------------
+
+		Command :
+cat message-777.txt
+
+		Result :
+If this message is authentic, the flag code is: lvgnqcjsnhlaqcrdghfrgrgya
+
+But how could we possibly know?
+
+------------------------------------------------------------------------------------
+
+Flag : lvgnqcjsnhlaqcrdghfrgrgya
+
