@@ -1,0 +1,17 @@
+Le grand retour du chiffrement de Vernam mod 26
+===============================================
+
+Bob a décidé que le chiffrement de Vernam modulo 26 était pas mal, 
+mais serait sans doute encore plus sûr avec un nonce.
+Ici, seuls les 26 caractères [a-z] minuscules sont chiffrés, 
+les autres sont ignorés (et sont juste copiés tels quels dans le chiffré)
+
+Ce chiffré contient le flag:
+e:hz hsciavy rwx rjyt eaamgigs wqmegfaix fum xejvuwfinswyzawmldlk. fjgg fjyf
+
+Vous avez accès à un oracle de chiffrement à l'adresse:
+https://lab.algonics.net/anticaptcha
+
+Seul hic, cet oracle aime bien les robots, mais pas trop les humains :(
+
+Bonne chance!

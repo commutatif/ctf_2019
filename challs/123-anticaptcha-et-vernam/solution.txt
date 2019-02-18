@@ -1,0 +1,7 @@
+- Super chall, voir oracle.py pour se connecter au serveur
+- On remarque quand  quand ça commence par « <lettre>: », c'est chiffré de la même façon avec la même clef
+- Clef de taille 6, chiffrer « aaaaaaaaaaaaaaaaaa », (a a la valeur 0 mod 26), donc on a la clef directos
+- déchiffrer avec ntm.py
+
+~/wip/123-anticaptcha-et-vernam$ ./ntm.py 
+ledrapeauquevouscherchezavidementestbjfusdjnjrufdfsljkppbienjoue
