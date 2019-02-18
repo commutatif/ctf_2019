@@ -1,5 +1,5 @@
-// TODO
-#define _POSIX_C_SOURCE 500
+/* gcc attack.c -O3 -Wall -pedantic -Wextra -std=c11 -l pthread */
+#define _XOPEN_SOURCE 500
 
 #include <stdio.h>
 #include <unistd.h>
@@ -14,11 +14,18 @@
 #define BUFSIZE 256
 
 #define ITERATIONS 1
-#define K 256
+#define K 1
 #define DATA 256
 
 #define FORK_FAILED_THRESHOLD 100
 #define PIPE_FAILED_THRESHOLD 100
+#define DUP_FAILED_THRESHOLD 100
+#define EXEC_FAILED_THRESHOLD 100
+
+#define PIPE_SLEEP 1000000
+#define FORK_SLEEP 1000000
+#define DUP_SLEEP 1000000
+#define EXEC_SLEEP 1000000
 
 struct thread_iterate_args {
 	unsigned char index, data;
@@ -32,13 +39,18 @@ struct thread_index_args {
 
 void spawn_process(int p[2]) {
 	int r;
+	unsigned int exec_failed = 0, dup_failed = 0;
 	struct timeval start;
 	char *argv[] = {"./dumbsmartcard"}, *environ[] = {NULL};
 	
-	r = dup2(p[0], STDIN_FILENO);
-	if(r < 0) {
-		perror("dup2");
-		exit(EXIT_FAILURE);
+	while((dup2(p[0], STDIN_FILENO)) < 0) {
+		fputs("dup2 failed!\n", stderr);
+		dup_failed++;
+		if(dup_failed > DUP_FAILED_THRESHOLD) {
+			perror("dup2");
+			exit(EXIT_FAILURE);
+		}
+		usleep(PIPE_SLEEP);
 	}
 
 	gettimeofday(&start, NULL);
@@ -50,9 +62,14 @@ void spawn_process(int p[2]) {
 
 	close(p[1]);
 
-	r = execve(argv[0], argv, environ);
-	if(r < 0) {
-		perror("Child: execve");
+	while((r = execve(argv[0], argv, environ)) < 0) {
+		fputs("exec failed!\n", stderr);
+		exec_failed++;
+		if(exec_failed > EXEC_FAILED_THRESHOLD) {
+			perror("execve");
+			exit(EXIT_FAILURE);				
+		}
+		usleep(1000);
 	}
 }
 
@@ -68,7 +85,9 @@ void *thread_iterate(void *raw_args) {
 	*args->avg = 0;
 
 	for(i = 0; i < ITERATIONS; i++) {
+		pipe_failed = 0;
 		while((r = pipe(p)) < 0) {
+			fputs("pipe failed!\n", stderr);
 			pipe_failed++;
 			if(pipe_failed > PIPE_FAILED_THRESHOLD) {
 				perror("pipe");
@@ -79,20 +98,20 @@ void *thread_iterate(void *raw_args) {
 
 		fork_failed = 0;
 		while((f = fork()) < 0) {
+			fputs("fork failed!\n", stderr);
 			fork_failed++;
 			if(fork_failed > FORK_FAILED_THRESHOLD) {
 				perror("fork");
 				exit(EXIT_FAILURE);				
 			}
-			usleep(1000);
+			usleep(FORK_SLEEP);
 		}
 
 		if(f < 0) {
 			exit(EXIT_FAILURE);
 		} else if(!f) {
 			spawn_process(p);
-			// Never called
-			exit(EXIT_SUCCESS);
+			// Nevers returns
 		}
 
 		// Get clock start
@@ -128,7 +147,7 @@ void *thread_iterate(void *raw_args) {
 
 void *thread_index(void *raw_args) {
 	struct thread_index_args *args = raw_args;
-	unsigned char data;
+	unsigned int data;
 	pthread_t threads[DATA];
 	int r;
 	struct thread_iterate_args targs[DATA];
@@ -196,8 +215,8 @@ int main(int argc, char *argv[]) {
 
 
 	for(k = 0; k < K; k++) {
-		strncpy(fpath, argv[1], MAX_PATH);
-		snprintf(fpath + l, MAX_PATH - l - 7, "/%03d.dat", k);
+		strncpy(fpath, argv[1], MAX_PATH - 1);
+		snprintf(fpath + l, MAX_PATH - l - 8, "/%03d.dat", k);
 		f = fopen(fpath, "w");
 		if(!f) {
 			perror("fopen");
@@ -205,7 +224,7 @@ int main(int argc, char *argv[]) {
 		}
 
 		for(data = 0; data < DATA; data++) {
-			fprintf(f, "%d %ld\n", k, avg[k][data]);
+			fprintf(f, "%d %ld\n", data, avg[k][data]);
 		}
 
 		fclose(f);
