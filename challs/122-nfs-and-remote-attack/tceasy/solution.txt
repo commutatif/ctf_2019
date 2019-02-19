@@ -1,0 +1,23 @@
+--- Solution ---
+- Monter le nfs de /home/bob
+- Créer une clef ssh et copier la clef publique dans <point de montage>/.ssh.authorized_keys
+- Se connecter en ssh
+- Compiler cuck.c et mettre l'exécutable sur le nfs (/home/bob)
+- Supposant qu'on est root sur notre machine, on exécute :
+	~# chown root:root cuck
+	~# chmod +s cuck
+- Se connecter en SSH en tant que bob et exécuter cuck
+	~# id
+	~# cat /root/flag
+
+--- flag.txt ---
+Pas mal!!!
+
+Bon, par contre, c'était la version facile, 
+donc ça vous donne juste la moitié du flag.
+
+voici le début du flag:
+ wsdlkfjvze.............
+
+Le flag complet sera révélé dans la version 
+difficile :p

