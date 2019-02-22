@@ -1,0 +1,3 @@
+Même s'il est possible de faire cet exercice "à la main", 
+il peut être interessant d'utiliser un peu d'algèbre pour
+cette cryptanalyse.
