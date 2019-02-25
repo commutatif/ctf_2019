@@ -1,6 +1,0 @@
-J'ai pris un dico de la langue anglaise assez petit e tfait un script python pour générer 
-le dictionnaire adéquat (mot existant anglais de sept lettres suivi de deux chiffres).
-Ensuite faut lancer aircrack avec le déci généré
-On trouve PROTECTION78
-On déchiffre le trafic avec wireshark puis on cherche les requêtes HTTP et on regarde les 
-authentifications basiques

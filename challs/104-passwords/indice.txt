@@ -1,3 +1,0 @@
-Voilà pourquoi on dit toujours qu'un mot de passe devrait contenir au
-moins 8 caractères avec des majuscules, des nombres, des caractères
-spéciaux...
