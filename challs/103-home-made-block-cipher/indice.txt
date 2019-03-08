@@ -1,0 +1,5 @@
+Les 32 premiers caractères du plaintext sont soit alphabétiques sans accent,
+soit des espaces
+en gros: [A-Za-z ]
+
+Par ailleurs, le texte étant en anglais, il est très probablement en ASCII.

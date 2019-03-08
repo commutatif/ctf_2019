@@ -1,0 +1,7 @@
+--- C'est pas résolu pour l'instant ---
+
+Alors, j'ai fait le programme ciph pour tester le chiffrement par blocs selon l'algo proposé.
+
+deciph est censé pouvoir bruteforce les permutations (Ek) et l'IV (24 * 16 possibilités).
+
+Le souci c'est que je peux déchiffrer des trucs chiffrés avec ciph, mais pas ciphertext.bin...
