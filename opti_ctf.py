@@ -70,9 +70,9 @@ if __name__ == "__main__":
 
 			challs[line[0]] = [parse_time(line[2])] + [int(i) for i in line[3:7]]
 
-results = []
-solve(challs, set(), 0, [0, 0, 0, 0], results)
+	results = []
+	solve(challs, set(), 0, [0, 0, 0, 0], results)
 
-for result, time, total, points in results:
-	# print("{}: {} points, {}".format(", ".join(result), points, build_time(time)))
-	print("{}\t{}\t\t{}\t{}\t{}\t{}\t{}".format(" ".join([r.split("-")[0] for r in result]), build_time(time), *points, total))
+	for result, time, total, points in results:
+		# print("{}: {} points, {}".format(", ".join(result), points, build_time(time)))
+		print("{}\t{}\t\t{}\t{}\t{}\t{}\t{}".format(" ".join([r.split("-")[0] for r in result]), build_time(time), *points, total))
