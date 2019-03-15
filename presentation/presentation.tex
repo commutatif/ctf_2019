@@ -1,0 +1,117 @@
+\documentclass[10pt,sans,usenames,dvipsnames,french,compress]{beamer}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{etoolbox}
+
+\mode<presentation>
+
+\usetheme{Warsaw}
+\useoutertheme[subsection=false]{miniframes}
+
+% Fix the crop bullets in the headline
+\makeatletter
+\setbeamertemplate{headline}
+{
+  \vskip-0.8ex
+  \begin{beamercolorbox}{section in head/foot}
+  \vskip2pt\insertnavigation{\paperwidth}\vskip4pt
+  \end{beamercolorbox}%
+}
+\makeatother
+
+%infolines footer
+\defbeamertemplate*{footline}{infolines theme}
+{
+	\leavevmode%
+	\hbox{%
+	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+	 \usebeamerfont{author in head/foot}\insertshortauthor%~~(\insertshortinstitute)
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+	 \usebeamerfont{title in head/foot}\insertshorttitle
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+	 \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+	 \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+	\end{beamercolorbox}}%
+	\vskip0pt%
+}
+
+\graphicspath{{images/}}
+
+\setbeamersize{text margin left=15pt,text margin right=15pt}
+
+% Disable navigation icons
+\beamertemplatenavigationsymbolsempty
+
+% Titlepage
+\title{CTF SeCReTS}
+\subtitle{Présentation}
+\author{Alexis Brouste -- Loïc Matin -- Alizée Murat}
+\date{\today{}}
+\institute[UVSQ]{UVSQ}
+
+% Line vertical spacing
+\setstretch{1.2}
+
+% See for colors names: https://en.wikibooks.org/wiki/LaTeX/Colors
+
+\begin{document}
+
+\section{hello.jpg}
+\begin{frame}[plain]
+	\titlepage
+\end{frame}
+
+\section{Introduction}
+\subsection{Défis présentés}
+\begin{frame}{Défis présentés}
+	\begin{itemize}
+		\item 114 - Reversing 3
+		\item 118 - WPA forensics
+		\item 120 - Courbe elliptique et AES-CCM
+	\end{itemize}
+\end{frame}
+
+\section{114 - Reversing 3}
+\subsection{Il était une fois}
+\begin{frame}{Texte d'exemple 1}
+	Texte d'exemple de Sony Vegas
+\end{frame}
+
+\subsection{Sous-section 2}
+\begin{frame}{Texte d'exemple 2}
+	Texte d'exemple de WINDOWS MOVIE MAKER
+\end{frame}
+
+\section{118 - WPA forensic}
+\subsection{Il était une fois}
+\begin{frame}{Texte d'exemple 1}
+	Texte d'exemple de Sony Vegas
+\end{frame}
+
+\subsection{Sous-section 2}
+\begin{frame}{Texte d'exemple 2}
+	Texte d'exemple de WINDOWS MOVIE MAKER
+\end{frame}
+
+\section{120 - Courbe elliptique et AES-CCM}
+\subsection{Il était une fois}
+\begin{frame}{Texte d'exemple 1}
+	Texte d'exemple de Sony Vegas
+\end{frame}
+
+\subsection{Sous-section 2}
+\begin{frame}{Texte d'exemple 2}
+	Texte d'exemple de WINDOWS MOVIE MAKER
+\end{frame}
+
+\end{document}
