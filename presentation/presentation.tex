@@ -120,11 +120,11 @@
 				In the ennemy base, there is a building, which is guarded by hundreds of 
 				highly trained soldiers.
 
-				In this building, there is a WPA-PSK protected wifi with an unbreakable
+				In this building, there is a {\color<3->{Dandelion}WPA-PSK} protected wifi with an unbreakable
 				password, like {\color<3->{Dandelion}a 10 letter english word (all uppercase) followed by 2
 				digits}.
 
-				In this wifi network, there is a web server that only the flag keeper
+				In this wifi network, there is a {\color<3->{Dandelion}web server} that only the flag keeper
 				(=admin) may access.
 
 				{\color<3->{Dandelion}The flag is his password}
@@ -318,7 +318,96 @@
 
 
 \subsection{Analyse du trafic}
+\begin{frame}{Analyse du trafic  avec Wireshark}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{118/wireshark0}
+	\end{center}
+\end{frame}
 
+\begin{frame}{Ajout de la clef de déchiffrement}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{118/wireshark1}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Trafic déchiffré}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{118/wireshark2}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Analyse du trafic}
+	\begin{block}{Conversations TCP}
+		\begin{center}
+			\includegraphics[width=0.8\linewidth]{118/wireshark3}
+		\end{center}
+	\end{block}
+
+	\begin{block}{Conversations}<2->
+		\begin{itemize}
+			\item Conversation TCP sur le port 80 \visible<3->{{\color{OliveGreen}$\rightarrow$ HTTP, application d'un filtre}}
+			\item Conversation UDP sur le port 53 \visible<4->{$\rightarrow$ résolution DNS}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Filtre de la conversation TCP}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{118/wireshark4}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Analyse de la première réponse HTTP}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{118/wireshark5}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Analyse de la deuxième requête HTTP}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{118/wireshark6}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Analyse de la deuxième réponse HTTP}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{118/wireshark7}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Décodage de l'en-tête}
+	\begin{block}{En-tête d'authentification}
+		Authorization: Basic YWRtaW46VGhpc0lzQW5VbmJyZWFrYWJsZUZsYWcu
+	\end{block}
+
+	\begin{block}{Décodage}<2->
+		\vspace{-3mm}
+		\begin{lstlisting}[style=Term]
+			~$ base64 -d <<< "YWRtaW46VGhpc0lzQW5VbmJyZWFrYWJsZUZsYWcu"
+			admin:ThisIsAnUnbreakableFlag.
+		\end{lstlisting}
+		\vspace{-2mm}
+	\end{block}
+
+	\begin{exampleblock}{Solution}<3->
+		Drapeau : \textbf{ThisIsAnUnbreakableFlag.}
+	\end{exampleblock}
+\end{frame}
+
+\subsection{Recommandations}
+\begin{frame}{Recommandations}
+	\begin{itemize}
+		\item<2-> Utiliser WPA 2 Entreprise
+		\item<3-> Clef / mots de passe robustes
+		\begin{itemize}
+			\item<4-> Caractères spéciaux
+			\item<5-> Longs
+			\item<6-> Difficulté à générer des dictionnaires efficaces
+		\end{itemize}
+		\item<7-> HTTPS
+		\item<8-> Interdire l'authentification basique
+	\end{itemize}
+\end{frame}
 
 \section{120 - Courbe elliptique et AES-CCM}
 \subsection{Titre}
