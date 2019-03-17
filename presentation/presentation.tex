@@ -8,6 +8,7 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{dirtree}
 \usepackage{listings}
+\usepackage{pythonhighlight}
 
 \mode<presentation>
 
@@ -62,7 +63,7 @@
 \title{CTF SeCReTS}
 \subtitle{Présentation}
 \author{Alexis Brouste -- Loïc Martin -- Alizée Murat}
-\date{Mercredi 20 mars 2019}
+\date{Mercredi 20 mars 2019, 16:00:00 CET}
 \institute[UVSQ]{UVSQ}
 
 % See for colors names: https://en.wikibooks.org/wiki/LaTeX/Colors
@@ -139,46 +140,175 @@
 	\end{block}
 \end{frame}
 
-\subsection{Procédure}
 \begin{frame}{Procédure}
 	\begin{itemize}
 		\item Déchiffrement du trafic
-		\begin{itemize}
-			\item Génération de dictionnaire
-			\item Cassage par force-brute de la clef WPA
-		\end{itemize}
+		\visible<2->{
+			\begin{itemize}
+				\item Génération de dictionnaire
+				\item Cassage par force-brute de la clef WPA
+			\end{itemize}
+		}
 		\item Analyse du trafic
-		\begin{itemize}
-			\item Récupération du drapeau
-		\end{itemize}
+		\visible<3->{
+			\begin{itemize}
+				\item Récupération du drapeau
+			\end{itemize}
+		}
 	\end{itemize}
 \end{frame}
 
 \subsection{Déchiffrement}
-\subsubsection{Création de dictionnaire}
-\subsubsection{Cassage de la clef WPA}
-\begin{frame}[fragile]{Cassage de la clef WPA}
-	\begin{block}{Outil : Aircrack}
+\subsubsection{Reconnaissance}
+\begin{frame}[fragile]{Reconnaissance}
+	\begin{block}{Analyse du fichier pcap}
+		\vspace{-3mm}
 		\begin{lstlisting}[style=Term]
-			~# aircrack-ng -w generated_dict.txt psk-01.cap
+			~# aircrack-ng psk-01.cap
 		\end{lstlisting}
+		\vspace{-2mm}
 	\end{block}
 
-	\begin{block}{Cassage en cours}<2->
-		\begin{figure}
-			\includegraphics[width=0.7\linewidth]{118/aircrack0}
-		\end{figure}
+	\begin{block}{Liste des \textit{handshakes}}<2->
+		\vspace{-3mm}
+		\begin{lstlisting}[style=Term]
+			Opening psk-01.cap please wait...
+			Read 5817 packets.
+
+			   #  BSSID              ESSID                     Encryption
+
+			   1  A0:F3:C1:20:A7:B9  flaghall                  WPA (1 handshake)
+
+			Choosing first network as target.
+
+			Opening psk-01.caplease wait...
+			Read 5817 packets.
+
+			1 potential targets
+
+			Please specify a dictionary (option -w).
+		\end{lstlisting}
+		\vspace{-2mm}
 	\end{block}
 \end{frame}
 
-\begin{frame}{Cassage de la clef WPA}
-	\begin{block}{Succès}
-		\begin{figure}
-			\includegraphics[width=0.7\linewidth]{118/aircrack1}
-		\end{figure}
+\subsubsection{Génération de dictionnaire}
+\begin{frame}{Recherche de dictionnaire}
+	\begin{block}{Recherche de dictionnaire}
+		Moteur de recherche : ``\textit{most common english words txt}''
 	\end{block}
 
-	\begin{exampleblock}<2->{En bref}
+	\begin{exampleblock}{Dépôt Github contenant des dictionnaires}<2->
+		\textit{This repo contains a list of the 10,000 most common English words in order of frequency, as determined by n-gram frequency analysis of the Google's Trillion Word Corpus.}
+	\end{exampleblock}
+
+	\begin{block}{Modification du dictionnaire}<3->
+		\begin{itemize}
+			\item Garder uniquement les mots de dix lettres
+			\item Transcrire en majuscules
+			\item Concaténer deux chiffres
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Modification du dictionnaire}
+	\vspace{-1mm}
+	\begin{block}{Script Python}
+		\begin{python}
+			with open("dict.txt", "r") as iff:
+				with open("generated_dict.txt", "w") as off:
+					for line in iff:
+						line = line.strip().upper()
+						if len(line) == 10:
+							for n in range(100):
+								off.write("{}{:02d}\n".format(line, n))
+		\end{python}
+		\vspace{-2mm}
+	\end{block}
+	\vspace{-1mm}
+	\begin{block}{Dictionnaire généré}<2->
+		\vspace{-3mm}
+		\begin{lstlisting}[style=Term]
+			~$ wc -l generated_dict.txt
+			61000 generated_dict.txt
+			~$ cat generated_dict.txt
+			...
+			MANAGEMENT98
+			MANAGEMENT99
+			TECHNOLOGY00
+			TECHNOLOGY01
+			TECHNOLOGY02
+			...
+		\end{lstlisting}
+		\vspace{-2mm}
+	\end{block}
+\end{frame}
+
+\subsubsection{Cassage de la clef WPA}
+\begin{frame}[fragile]{Cassage de la clef WPA}
+	\begin{block}{Commande}
+		\vspace{-3mm}
+		\begin{lstlisting}[style=Term]
+			~# aircrack-ng -w generated_dict.txt psk-01.cap
+		\end{lstlisting}
+		\vspace{-2mm}
+	\end{block}
+
+	\begin{block}{Cassage en cours}<2->
+		\vspace{-3mm}
+		\begin{lstlisting}[style=Term]
+			                          Aircrack-ng 1.5.2 
+
+		      [00:00:00] 3852/60999 keys tested (5333.67 k/s) 
+
+		      Time left: 10 seconds                                      6.31%
+
+		                       Current passphrase: ASSESSMENT91               
+
+
+		      Master Key     : 66 A8 42 94 79 45 03 6F C9 A1 11 33 AA 52 55 D0 
+		                       3E 26 2F 55 43 A4 EC 36 E3 13 3C D6 17 B0 96 AC 
+
+		      Transient Key  : CE CF A3 E6 2F 92 8C 5E 94 10 3F 8E 10 F9 FC 92 
+		                       25 D3 FE F2 7F D1 4F 27 C1 51 71 8D F5 75 17 5C 
+		                       08 F4 5C 2C C8 42 F1 BD 20 3B D7 79 03 2F 05 90 
+		                       16 E1 E9 92 BB 73 6A 93 6E F8 7A 80 2F 51 81 9E 
+
+		      EAPOL HMAC     : FC 99 11 B1 45 5C E1 B6 74 E5 2D CB A5 88 21 E1
+		\end{lstlisting}
+		\vspace{-2mm}
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Cassage de la clef WPA}
+	\vspace{-1mm}
+	\begin{block}{Succès}
+		\vspace{-3mm}
+		\begin{lstlisting}[style=Term]
+		                              Aircrack-ng 1.5.2 
+
+		      [00:00:11] 60926/60999 keys tested (5250.19 k/s) 
+
+		      Time left: 0 seconds                                      99.88%
+
+		                         KEY FOUND! [ PROTECTION78 ]
+
+
+		      Master Key     : 58 55 68 7D CA B8 C1 48 9E 85 0C E6 AD EB C2 74 
+		                       4B 58 6E D5 42 56 BD CF 60 36 F4 3D 2E 13 14 BA 
+
+		      Transient Key  : FF 4D 05 EF 35 C9 91 08 27 C0 CE 25 C2 A0 9D 39 
+		                       23 46 41 E5 E9 FD B7 38 57 59 52 94 11 5F 54 05 
+		                       6F 6C 3F CA 15 19 BD 0C 40 B7 67 10 6E 41 35 A1 
+		                       17 A8 4D 41 BE 48 F9 AB 59 B5 1E 51 09 F6 79 7F 
+
+		      EAPOL HMAC     : 9B F5 0B 0A 75 01 EC F2 C5 CC 64 A6 4E FD 11 16
+		\end{lstlisting}
+		\vspace{-2mm}
+
+	\end{block}
+	\vspace{-1mm}
+	\begin{exampleblock}{En bref}<2->
 		\begin{itemize}
 			\item Clef : \textbf{PROTECTION78}
 			\item<3-> Importance d'un dictionnaire optimisé (cassage en onze secondes !)
