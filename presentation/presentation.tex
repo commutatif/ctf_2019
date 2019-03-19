@@ -44,6 +44,13 @@
 	\vskip0pt%
 }
 
+% THANK YOU LATEX
+% Accents dans les listings
+\lstset{
+	extendedchars=true,
+	literate={é}{{\'e}}1
+}
+
 % Terminal-like listing formatting
 \lstdefinestyle{Term}
 {
@@ -108,7 +115,7 @@
 	\begin{block}<2->{\textit{indice.txt}}
 		\begin{itshape}	
 			\begin{small}
-			Pas d'indice.txt, le flag est le mot de pas de l'executable.
+			Pas d'indice.txt, le flag est le mot de passe de l'executable.
 			\end{small}
 		\end{itshape}
 	\end{block}
@@ -118,21 +125,19 @@
 	\begin{itemize}
 		\item Analyse préliminaire du fichier
 		
-			\begin{itemize}
-				\item Type de fichier
-				\item Syntaxe du programme
-			\end{itemize}
+		\begin{itemize}
+			\item Type de fichier
+			\item Syntaxe du programme
+		\end{itemize}
 		
 		\item Analyse statique de l'executable
 		
-			\begin{itemize}
-				
-				\item Analyse main
-				\item Taille de flag
-				\item Vérification caractère par caractère
-				\item Reconstitution du flag
-			\end{itemize}
-		
+		\begin{itemize}
+			\item Analyse main
+			\item Taille de flag
+			\item Vérification caractère par caractère
+			\item Reconstitution du flag
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -146,17 +151,17 @@
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
+
 	\begin{block}{}
 		\vspace{-3mm}
 		\begin{lstlisting}[style=Term]
-		      encoreunflag: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), 
-		      dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32,
-		      BuildID[sha1]=bd05ff0f9ab4efc17d569ac16c3d34f50e389882, not stripped
-
+			encoreunflag: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), 
+			dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32,
+			BuildID[sha1]=bd05ff0f9ab4efc17d569ac16c3d34f50e389882, not stripped
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
-\end{frame}	
+\end{frame}
 
 \subsubsection{Syntaxe du programme}
 \begin{frame}[fragile]{Syntaxe du programme}
@@ -167,136 +172,134 @@
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
+
 	\begin{block}{}
 		\vspace{-3mm}
 		\begin{lstlisting}[style=Term]
-		      Suntax: ./encoreunflag <password>
+			Suntax: ./encoreunflag <password>
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
-		\begin{block}{Essai avec mot de passe}
+
+	\begin{block}{Essai avec mot de passe}
 		\vspace{-3mm}
 		\begin{lstlisting}[style=Term]
 			~# ./encoreunflag aaaa
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
+
 	\begin{block}{}
 		\vspace{-3mm}
 		\begin{lstlisting}[style=Term]
-		      Vous avez perdu!!
-
+			Vous avez perdu!!
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
-\end{frame}	
-
+\end{frame}
 
 \subsubsection{Analyse statique du binaire}
 \begin{frame}[fragile]{Analyse statique du binaire}
 	\begin{block}{}
-	  Pour accéder au code assembleur du binaire, il a fallut utiliser un désassembleur.
+		Pour accéder au code assembleur du binaire, il a fallu utiliser un désassembleur.
 	\end{block}
-\begin{exampleblock}{Choix de l'outil}
-	  Utilisation du désassembleur IDA.
+
+	\begin{exampleblock}{Choix de l'outil}
+		Utilisation du désassembleur IDA.
 	\end{exampleblock}
-\end{frame}	
+\end{frame}
 
-%\begin{frame}[fragile]{Étude de la fonction main}
-	
-%	  \begin{center}
-%			\includegraphics[height=0.5\linewidth]{114/graph.png}
-%	 \end{center}
-%\end{frame}	
-%\subsection{}
+% \begin{frame}[fragile]{Étude de la fonction main}
+% 	\begin{center}
+% 		\includegraphics[height=0.5\linewidth]{114/graph.png}
+% 	\end{center}
+% \end{frame}
+% \subsection{}
+
 \begin{frame}[fragile]{Étude de la fonction main}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{114/main.png}
+		\includegraphics[width=0.5\linewidth]{114/syntax.png}
+	\end{center}
 
-	  \begin{center}
-			\includegraphics[width=0.5\linewidth]{114/main.png}
-			\includegraphics[width=0.5\linewidth]{114/syntax.png}
-		\end{center}
-			\begin{block}{}
-			Dans ce premier block le programme vérifie qu'il y a bien deux arguments, si c'est le cas on jump à loc\_8048523 sinon, il affiche \textit{"Syntax: \%s <password>"}
-\end{block}
+	\begin{block}{}
+		Dans ce premier block le programme vérifie qu'il y a bien deux arguments, si c'est le cas on jump à loc\_8048523 sinon, il affiche \textit{"Syntax: \%s <password>"}
+	\end{block}
+\end{frame}
 
-\end{frame}	
 \begin{frame}[fragile]{Taille du flag}
-\begin{block}{Vérification taille du flag}
-	  \begin{center}
+	\begin{block}{Vérification taille du flag}
+		\begin{center}
 			\includegraphics[width=0.5\linewidth]{114/lenght.png}
-			
 		\end{center}
-		\end{block}
+	\end{block}
+
 	\begin{exampleblock}{}
 		\begin{itemize}
-			  
-		\item appel à la fonction \_strlen avec comme argument [ebp+var\_C] qui correspond à notre input
-		\item comparaison de eax (qui a pour valeur le retour du call \_strlen ie la longueur de notre input) à la valeur hexadecimal 14 (20 en décimal)
-			\end{itemize}
-\end{exampleblock}
-
-\end{frame}	
+			\item appel à la fonction \_strlen avec comme argument [ebp+var\_C] qui correspond à notre input
+			\item comparaison de eax (qui a pour valeur le retour du call \_strlen ie la longueur de notre input) à la valeur hexadecimal 14 (20 en décimal)
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
 
 \begin{frame}[fragile]{Taille du flag}
-\begin{block}{Information récupéré}
-	  Le flag est composé de 20 caractères.
-		\end{block}
+	\begin{block}{Information récupéré}
+		Le flag est composé de 20 caractères.
+	\end{block}
+
 	\begin{exampleblock}{}
 		\begin{itemize}
-			  
-		\item Si notre input n'est pas composé de 20 caractères -> appel à la fonction perdu
-	
-			\end{itemize}
-\end{exampleblock}
+			\item Si notre input n'est pas composé de 20 caractères -> appel à la fonction perdu
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
 
-\end{frame}	
 \begin{frame}[fragile]{Call perdu}
- \begin{center}
-			\includegraphics[width=0.5\linewidth]{114/perdu.png}
-			
-		\end{center}
-\begin{block}{}
-	  perdu affiche "Vous avez perdu!"
-		\end{block}
-		\end{frame} 
-		
-		\begin{frame}[fragile]{Vérification caratère par caractère}
-		\begin{block}{}
-		   20 blocks d'instructions de cette forme:    
- \begin{center}
-			\includegraphics[height=0.2\linewidth]{114/cmpcara.png}
-			
-		\end{center}
-		
-		\end{block}
-\begin{block}{}
-	  \begin{itemize}
-	      \item On met dans eax un pointeur vers la valeur de notre input.
-	      \item On incrémente eax de i (correspond à décaler le pointeur sur le caractère à la i ème position (ici 1).
-	      \item On compare ce caractère à une valeur hexadécimal (ici 46).
-	  \end{itemize}
-		\end{block}
-		\begin{block}{}
-		      Si les caractères sont identiques ont passe au block suivant, sinon appel à perdu
-		\end{block}
-		\end{frame}
-		
-				\begin{frame}[fragile]{Reconstitution du flag}
-		\begin{block}{ Attention:}
-		  
-		        La vérification des caractères n'est pas faite dans l'odre (bien regarder la position du caractère vérifié dans le block).
-		    \end{block}   
-		   
+ 	\begin{center}
+		\includegraphics[width=0.5\linewidth]{114/perdu.png}
+	\end{center}
 
-\begin{exampleblock}{}
-	  \begin{itemize}
-	      \item On obtient le flag en hexadécimale: \textbf{43 46 41 54 4c 59 6f 6a 74 72 48 75 4d 52 5a 49 4a 6b 71 78}
-	      \item En ASCII: \textbf{CFATLYojtrHuMRZIJkqx}
-	  \end{itemize}
-		\end{exampleblock}
+	\begin{block}{}
+		perdu affiche "Vous avez perdu!"
+	\end{block}
+\end{frame}
 		
-		\end{frame}
-		\begin{frame}[fragile]{C'est gagné}
+\begin{frame}[fragile]{Vérification caratère par caractère}
+	\begin{block}{}
+		20 blocks d'instructions de cette forme:    
+ 		
+ 		\begin{center}
+			\includegraphics[height=0.2\linewidth]{114/cmpcara.png}
+		\end{center}
+	\end{block}
+
+	\begin{block}{}
+		\begin{itemize}
+			\item On met dans eax un pointeur vers la valeur de notre input.
+			\item On incrémente eax de i (correspond à décaler le pointeur sur le caractère à la i ème position (ici 1).
+			\item On compare ce caractère à une valeur hexadécimal (ici 46).
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{}
+		Si les caractères sont identiques ont passe au block suivant, sinon appel à perdu
+	\end{block}
+\end{frame}
+		
+\begin{frame}[fragile]{Reconstitution du flag}
+	\begin{block}{Attention :}
+		La vérification des caractères n'est pas faite dans l'odre (bien regarder la position du caractère vérifié dans le block).
+	\end{block}
+
+	\begin{exampleblock}{}
+		\begin{itemize}
+			\item On obtient le flag en hexadécimale: \textbf{43 46 41 54 4c 59 6f 6a 74 72 48 75 4d 52 5a 49 4a 6b 71 78}
+			\item En ASCII: \textbf{CFATLYojtrHuMRZIJkqx}
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{C'est gagné}
 	\begin{block}{}
 		\vspace{-3mm}
 		\begin{lstlisting}[style=Term]
@@ -304,15 +307,15 @@
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
+
 	\begin{block}{}
 		\vspace{-3mm}
 		\begin{lstlisting}[style=Term]
-		      Et c'est gagné!!
-
+			Et c'est gagné!!
 		\end{lstlisting}
 		\vspace{-2mm}
 	\end{block}
-\end{frame}	
+\end{frame}
 
 \section{118 - WPA forensic}
 \subsection{Titre}
