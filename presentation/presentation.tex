@@ -418,15 +418,19 @@
 
 \subsubsection{Génération de dictionnaire}
 \begin{frame}{Recherche de dictionnaire}
-	\begin{block}{Recherche de dictionnaire}
+	\begin{block}{Rappel \textit{indice.txt}}
+		like a 10 letter english word (all uppercase) followed by 2 digits
+	\end{block}
+
+	\begin{block}{Recherche de dictionnaire}<2->
 		Moteur de recherche : ``\textit{most common english words txt}''
 	\end{block}
 
-	\begin{exampleblock}{Dépôt Github contenant des dictionnaires}<2->
+	\begin{exampleblock}{Dépôt Github contenant des dictionnaires}<3->
 		\textit{This repo contains a list of the 10,000 most common English words in order of frequency, as determined by n-gram frequency analysis of the Google's Trillion Word Corpus.}
 	\end{exampleblock}
 
-	\begin{block}{Modification du dictionnaire}<3->
+	\begin{block}{Modification du dictionnaire}<4->
 		\begin{itemize}
 			\item Garder uniquement les mots de dix lettres
 			\item Transcrire en majuscules
@@ -636,6 +640,9 @@
 			\item<6-> Difficulté à générer des dictionnaires efficaces
 		\end{itemize}
 		\item<7-> HTTPS
+		\begin{itemize}
+			\item<7-> Éviter le man-in-the-middle
+		\end{itemize}
 		\item<8-> Interdire l'authentification basique
 	\end{itemize}
 \end{frame}
