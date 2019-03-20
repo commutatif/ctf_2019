@@ -48,7 +48,15 @@
 % Accents dans les listings
 \lstset{
 	extendedchars=true,
-	literate={é}{{\'e}}1
+	literate=
+		{à}{{\`a}}1
+		{é}{{\'e}}1
+		{ê}{{\^e}}1
+		{ó}{{\'o}}1
+		{ô}{{\^o}}1
+		{ú}{{\'u}}1
+		{ü}{{\"u}}1
+		{ç}{{\c{c}}}1
 }
 
 % Terminal-like listing formatting
@@ -207,14 +215,8 @@
 	\end{exampleblock}
 \end{frame}
 
-% \begin{frame}[fragile]{Étude de la fonction main}
-% 	\begin{center}
-% 		\includegraphics[height=0.5\linewidth]{114/graph.png}
-% 	\end{center}
-% \end{frame}
-% \subsection{}
-
 \begin{frame}[fragile]{Étude de la fonction main}
+	\vspace{-2mm}
 	\begin{center}
 		\includegraphics[width=0.5\linewidth]{114/main.png}
 		\includegraphics[width=0.5\linewidth]{114/syntax.png}
@@ -280,7 +282,7 @@
 	\end{block}
 
 	\begin{block}{}
-		Si les caractères sont identiques ont passe au bloc suivant, sinon appel à \texttt{perdu}
+		Si les caractères sont identiques on passe au bloc suivant, sinon appel à \texttt{perdu}
 	\end{block}
 \end{frame}
 
@@ -541,27 +543,30 @@
 
 \subsection{Analyse du trafic}
 \begin{frame}{Analyse du trafic  avec Wireshark}
+	\vspace{-2mm}
 	\begin{center}
-		\includegraphics[width=0.8\linewidth]{118/wireshark0}
+		\includegraphics[width=0.85\linewidth]{118/wireshark0}
 	\end{center}
 \end{frame}
 
 \begin{frame}{Ajout de la clef de déchiffrement}
+	\vspace{-2mm}
 	\begin{center}
-		\includegraphics[width=0.8\linewidth]{118/wireshark1}
+		\includegraphics[width=0.85\linewidth]{118/wireshark1}
 	\end{center}
 \end{frame}
 
 \begin{frame}{Trafic déchiffré}
+	\vspace{-2mm}
 	\begin{center}
-		\includegraphics[width=0.8\linewidth]{118/wireshark2}
+		\includegraphics[width=0.85\linewidth]{118/wireshark2}
 	\end{center}
 \end{frame}
 
 \begin{frame}{Analyse du trafic}
 	\begin{block}{Conversations TCP}
 		\begin{center}
-			\includegraphics[width=0.8\linewidth]{118/wireshark3}
+			\includegraphics[width=0.85\linewidth]{118/wireshark3}
 		\end{center}
 	\end{block}
 
@@ -574,26 +579,30 @@
 \end{frame}
 
 \begin{frame}{Filtre de la conversation TCP}
+	\vspace{-2mm}
 	\begin{center}
-		\includegraphics[width=0.8\linewidth]{118/wireshark4}
+		\includegraphics[width=0.85\linewidth]{118/wireshark4}
 	\end{center}
 \end{frame}
 
 \begin{frame}{Analyse de la première réponse HTTP}
+	\vspace{-2mm}
 	\begin{center}
-		\includegraphics[width=0.8\linewidth]{118/wireshark5}
+		\includegraphics[width=0.85\linewidth]{118/wireshark5}
 	\end{center}
 \end{frame}
 
 \begin{frame}{Analyse de la deuxième requête HTTP}
+	\vspace{-2mm}
 	\begin{center}
-		\includegraphics[width=0.8\linewidth]{118/wireshark6}
+		\includegraphics[width=0.85\linewidth]{118/wireshark6}
 	\end{center}
 \end{frame}
 
 \begin{frame}{Analyse de la deuxième réponse HTTP}
+	\vspace{-2mm}
 	\begin{center}
-		\includegraphics[width=0.8\linewidth]{118/wireshark7}
+		\includegraphics[width=0.85\linewidth]{118/wireshark7}
 	\end{center}
 \end{frame}
 
@@ -796,7 +805,7 @@
 \subsubsection{Calcul du secret partagé}
 \begin{frame}[fragile]{Calcul du secret partagé}
   \begin{itemize}{}
-    \item Calcul des coordonnées de bob via décompression du point
+    \item Calcul des coordonnées de Bob via décompression du point
     \item <2->Calcul du point partagé
   \end{itemize}
   \begin{block}<2->{Commandes sage}
@@ -876,14 +885,14 @@
                         ton flag est le sha1sum de ce message (le fichier .txt, pas le fichier
                         compressé!)
 
-                        Encore bravo et a bientot!
+                        Encore bravo et a bientôt!
                         -- Bob
     \end{lstlisting}
     \vspace{-2mm}
   \end{block}
-  \begin{block}<3->{}
-    (Oui, les accents sont passés à la trappe)
-  \end{block}
+  % \begin{block}<3->{}
+  %   (Oui, les accents sont passés à la trappe)
+  % \end{block}
 \end{frame}
 
 
